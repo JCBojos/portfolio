@@ -150,6 +150,16 @@
   --cursor-blend: normal;
 }
 
+/* These components use a hardcoded dark translucent background (rgba(15,22,41,X))
+   that doesn't adapt to the light theme, so it needs an explicit override here. */
+[data-theme="light"] .glass-card:not(.about__mini-card--highlight),
+[data-theme="light"] .stats,
+[data-theme="light"] .tech-icon,
+[data-theme="light"] .contact__link,
+[data-theme="light"] .process__step {
+  background: #FFFFFF;
+}
+
 /* Smooth cross-theme transitions */
 body,
 .header,
